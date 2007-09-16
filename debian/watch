@@ -1,0 +1,5 @@
+# Compulsory line, this is a version 3 file
+version=3
+
+http://markstaggs.net/wmmemload/ (?:.*)?wmmemload-(.*)\.tar\.gz \
+  debian uupdate

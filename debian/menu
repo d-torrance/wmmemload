@@ -1,0 +1,2 @@
+?package(wmmemload):needs="X11" section="Window Maker" \
+  title="wmmemload" command="/usr/bin/wmmemload"

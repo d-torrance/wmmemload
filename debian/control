@@ -1,0 +1,19 @@
+Source: wmmemload
+Section: x11
+Priority: optional
+Maintainer: Philipp Benner <mail@philipp-benner.de>
+Build-Depends: debhelper (>> 4.0.0), dpatch, autotools-dev, libx11-dev, libxext-dev, libxpm-dev, libxt-dev
+Standards-Version: 3.7.2
+
+Package: wmmemload
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: WindowMaker dockapp to monitor memory and swap usage
+ wmmemload displays the current memory and swap usage as a percentage
+ value. It is based on wmcpuload and wmmemmon, and as such looks very
+ nice alongside those.
+ .
+ wmmemload is designed to work with the WindowMaker dock, but will work with
+ other window managers as well.
+ .
+ Homepage: http://www.markstaggs.net/
