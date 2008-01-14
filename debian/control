@@ -1,7 +1,8 @@
 Source: wmmemload
 Section: x11
 Priority: optional
-Maintainer: Philipp Benner <mail@philipp-benner.de>
+Maintainer: Philipp Benner <pbenner@uni-osnabrueck.de>
+XS-DM-Upload-Allowed: yes
 Build-Depends: debhelper (>> 5.0.0), dpatch, autotools-dev, libx11-dev, libxext-dev, libxpm-dev, libxt-dev
 Standards-Version: 3.7.3
 Vcs-Browser: http://svn.debian.org/wsvn/collab-maint/deb-maint/wmmemload/
