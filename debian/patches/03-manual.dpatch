@@ -1,0 +1,32 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 01-configure-kfreebsd.dpatch by Philipp Benner <pbenner@uni-osnabrueck.de>
+##
+## DP: Fix errors in the manpage.
+
+@DPATCH@
+
+diff -urNad wmmemload-0.1.6~/doc/wmmemload.1 wmmemload-0.1.6/doc/wmmemload.1
+--- wmmemload-0.1.6~/doc/wmmemload.1	2008-05-26 22:35:37 +0700
++++ wmmemload-0.1.6/doc/wmmemload.1	2008-05-26 22:35:28 +0700
+@@ -61,7 +61,7 @@
+ .B \-c,  \-\-ignore\-cached
+ ignore cached pages. (GNU/Linux / FreeBSD)
+ .TP
+-.B \-c,  \-\-ignore\-wired
++.B \-wr,  \-\-ignore\-wired
+ ignore wired pages. (FreeBSD)
+ .TP
+ .B \-h,  \-\-help
+@@ -76,11 +76,11 @@
+ .B \-bw, \-\-broken\-wm
+ activate broken window manager fix
+ .TP
+-.B \-a,  \-\-alarm\-mem <percentage>
++.B \-am,  \-\-alarm\-mem <percentage>
+ activate alarm mode of memory. <percentage> is threshold of percentage from 0
+ to 100.(90 is default)
+ .TP
+-.B \-a,  \-\-alarm\-swap <percentage>
++.B \-as,  \-\-alarm\-swap <percentage>
+ activate alarm mode of swap. <percentage> is threshold of percentage from 0 to
+ 100.(50 is default)
