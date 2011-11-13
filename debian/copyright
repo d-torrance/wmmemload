@@ -26,7 +26,7 @@ License: GPL-2+
 Files: debian/*
 Copyright:
  © 2002-2007 Søren Boll Overgaard <boll@fork.dk>
- © 2007 Philipp Benner <pbenner@uni-osnabrueck.de>
+ © 2007 Philipp Benner <philipp@debian.org>
 License: GPL-2+
  This package was debianized by Søren Boll Overgaard on Mon, 8 Apr 2002
  and is now maintained by Philipp Benner.

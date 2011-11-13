@@ -29,8 +29,7 @@ else
   CFLAGS += -O2
 endif
 
-.NOTPARALLEL:
-include /usr/share/dpatch/dpatch.make
+include /usr/share/quilt/quilt.make
 
 config: config-stamp
 config-stamp:
@@ -75,7 +74,9 @@ configure-stamp:
 	touch $@
 
 
-build: patch config configure-stamp build-stamp
+build: build-arch build-indep
+build-arch: patch config configure-stamp build-stamp
+build-indep: patch config configure-stamp build-stamp
 build-stamp:
 	dh_testdir
 

@@ -1,3 +1,10 @@
+wmmemload (0.1.6-7) unstable; urgency=low
+
+  * Using quilt instead of dpatch.
+  * Added patch for kernel 3.0.
+
+ -- Philipp Benner <philipp@debian.org>  Sat, 12 Nov 2011 10:52:48 +0000
+
 wmmemload (0.1.6-6) unstable; urgency=low
 
   * Fixing errors in manual page.

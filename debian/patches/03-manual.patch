@@ -1,10 +1,7 @@
-#! /bin/sh /usr/share/dpatch/dpatch-run
-## 01-configure-kfreebsd.dpatch by Philipp Benner <pbenner@uni-osnabrueck.de>
-##
-## DP: Fix errors in the manpage.
-
-@DPATCH@
-
+Author: Philipp Benner <philipp@debian.org>
+Description: Fix errors in the manpage
+Forwarded: no
+License: GPL
 diff -urNad wmmemload-0.1.6~/doc/wmmemload.1 wmmemload-0.1.6/doc/wmmemload.1
 --- wmmemload-0.1.6~/doc/wmmemload.1	2008-05-26 22:35:37 +0700
 +++ wmmemload-0.1.6/doc/wmmemload.1	2008-05-26 22:35:28 +0700
