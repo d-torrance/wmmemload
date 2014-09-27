@@ -1,3 +1,9 @@
+wmmemload (0.1.6-8) unstable; urgency=low
+
+  * Package orphaned.
+
+ -- Philipp Benner <philipp@debian.org>  Sat, 27 Sep 2014 17:16:20 +0200
+
 wmmemload (0.1.6-7) unstable; urgency=low
 
   * Using quilt instead of dpatch.
