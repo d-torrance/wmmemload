@@ -1,7 +1,7 @@
 Source: wmmemload
 Section: x11
 Priority: optional
-Maintainer: Debian QA Group <packages@qa.debian.org>
+Maintainer: Doug Torrance <dtorrance@monmouthcollege.edu>
 Build-Depends: debhelper (>> 5.0.0), quilt, autotools-dev, libx11-dev, libxext-dev, libxpm-dev, libxt-dev
 Standards-Version: 3.9.2
 Vcs-Browser: http://svn.debian.org/wsvn/collab-maint/deb-maint/wmmemload/
