@@ -4,6 +4,7 @@ Priority: optional
 Maintainer: Doug Torrance <dtorrance@monmouthcollege.edu>
 Build-Depends: debhelper (>=9), dh-autoreconf, libx11-dev, libxext-dev, libxpm-dev, libxt-dev
 Standards-Version: 3.9.6
+Homepage: http://windowmaker.org/dockapps/?name=wmmemload
 Vcs-Browser: https://github.com/d-torrance/wmmemload
 Vcs-Git: https://github.com/d-torrance/wmmemload.git
 
