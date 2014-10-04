@@ -1,35 +1,40 @@
-This package was downloaded from http://markstaggs.net/wmmemload/
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: wmmemload
+Upstream-Contact: Window Maker Developers Team <wmaker-dev@lists.windowmaker.org>
+Source: http://windowmaker.org/dockapps/?name=wmmemload
 
 Files: *
-Copyright:
- © 2002 Mark Staggs <me@markstaggs.net>
- © 2001-2002 Seiichi Sato
- © 2001 John McCutchan
- © 2001 Jonathan Lang
- © 1999 Alfredo K. Kojima
+Copyright: 2002 Mark Staggs <me@markstaggs.net>
+	   2001-2002 Seiichi Sato <ssato@sh.rim.or.jp>
+	   2001 John McCutchan <ttb@tentacle.dhs.org>
+	   2001 Jonathan Lang <lang@synopsys.com>
+	   1999 Alfredo K. Kojima <kojima@windowmaker.info>
 License: GPL-2+
- This program is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
- .
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
- .
- You should have received a copy of the GNU General Public License with
- the Debian GNU/Linux distribution in file /usr/share/common-licenses/GPL;
- if not, write to the Free Software Foundation, Inc., 51 Franklin St,
- Fifth Floor, Boston, MA 02110-1301, USA.
 
 Files: debian/*
-Copyright:
- © 2002-2007 Søren Boll Overgaard <boll@fork.dk>
- © 2007 Philipp Benner <philipp@debian.org>
+Copyright: 2002-2007 Søren Boll Overgaard <boll@fork.dk>
+	   2007 Philipp Benner <philipp@debian.org>
+	   2014 Doug Torrance <dtorrance@monmouthcollege.edu>
 License: GPL-2+
- This package was debianized by Søren Boll Overgaard on Mon, 8 Apr 2002
- and is now maintained by Philipp Benner.
 
-On Debian systems, the complete text of the GNU General Public
-License, version 2, can be found in /usr/share/common-licenses/GPL-2.
+License: GPL-2+
+ This program is free software; you can redistribute it
+ and/or modify it under the terms of the GNU General Public
+ License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later
+ version.
+ .
+ This program is distributed in the hope that it will be
+ useful, but WITHOUT ANY WARRANTY; without even the implied
+ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ PURPOSE.  See the GNU General Public License for more
+ details.
+ .
+ You should have received a copy of the GNU General Public
+ License along with this package; if not, write to the Free
+ Software Foundation, Inc., 51 Franklin St, Fifth Floor,
+ Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 2 can be found in the file
+ `/usr/share/common-licenses/GPL-2'.
