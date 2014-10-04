@@ -1,9 +1,0 @@
-Author: Philipp Benner <philipp@debian.org>
-Description: Create stamp-h.in required to inhibit autoheader execution
-Forwarded: no
-License: GPL
-diff -urNad wmmemload-0.1.6~/stamp-h.in wmmemload-0.1.6/stamp-h.in
---- wmmemload-0.1.6~/stamp-h.in	1970-01-01 01:00:00.000000000 +0100
-+++ wmmemload-0.1.6/stamp-h.in	2007-07-25 11:19:18.000000000 +0200
-@@ -0,0 +1 @@
-+timestamp
