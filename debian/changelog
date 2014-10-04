@@ -32,44 +32,47 @@ wmmemload (0.1.6+20141004-1) UNRELEASED; urgency=medium
 
 wmmemload (0.1.6-8) unstable; urgency=low
 
-  * Package orphaned.
+  * Orphan package.
 
  -- Philipp Benner <philipp@debian.org>  Sat, 27 Sep 2014 17:16:20 +0200
 
 wmmemload (0.1.6-7) unstable; urgency=low
 
-  * Using quilt instead of dpatch.
-  * Added patch for kernel 3.0.
+  * Use quilt instead of dpatch.
+  * Add patch for kernel 3.0.
 
  -- Philipp Benner <philipp@debian.org>  Sat, 12 Nov 2011 10:52:48 +0000
 
 wmmemload (0.1.6-6) unstable; urgency=low
 
-  * Fixing errors in manual page.
+  * Fix errors in manual page.
 
  -- Philipp Benner <pbenner@uni-osnabrueck.de>  Mon, 02 Jun 2008 16:42:43 +0200
 
 wmmemload (0.1.6-5) unstable; urgency=low
 
-  * New maintainer e-mail address.
-  * debian/control: Added DM-Upload-Allowed: yes.
-  * debian/control: Standards version 3.7.3.
-  * debian/control: Added homepage field.
-  * debian/copyright: UTF-8 encoding.
-  * debian/copyright: Converted to machine interpretable format.
-  * debian/dirs: Removed usr/sbin/.
+  * Update maintainer e-mail address.
+  * debian/control
+    - Add DM-Upload-Allowed: yes.
+    - Bump Standard-Version to 3.7.3.
+    - Add Homepage field.
+  * debian/copyright
+    - Use UTF-8 encoding.
+    - Convert to machine interpretable format.
+  * debian/dirs
+    - Remove usr/sbin/.
 
  -- Philipp Benner <pbenner@uni-osnabrueck.de>  Mon, 14 Jan 2008 18:26:42 +0100
 
 wmmemload (0.1.6-4) unstable; urgency=low
 
-  * Adopting package (Closes: #427136).
-  * Standards policy version 3.7.2.
+  * New maintainer (Closes: #427136).
+  * Bump Standards-Version to 3.7.2.
   * Update config.sub and config.guess during the build process.
-  * Using dpatch to create stamp-h.in to prevent execution of autoheader.
-  * Menu update.
-  * New watch file.
-  * Updated copyright file.
+  * Use dpatch to create stamp-h.in to prevent execution of autoheader.
+  * Update menu.
+  * Add new watch file.
+  * Update copyright file.
 
  -- Philipp Benner <mail@philipp-benner.de>  Wed, 25 Jul 2007 18:25:25 +0200
 
@@ -85,49 +88,51 @@ wmmemload (0.1.6-3) unstable; urgency=low
 
 wmmemload (0.1.6-2) unstable; urgency=low
 
-  * Orphan package, set maintainer to Debian QA Group
+  * Orphan package, set maintainer to Debian QA Group.
 
  -- Gordon Fraser <gordon@debian.org>  Sat, 02 Jun 2007 06:15:38 +0200
 
 wmmemload (0.1.6-1) unstable; urgency=low
 
-  * New upstream version (Closes: #325087)
-  * Fix build dependencies (Closes: #346978)
+  * New upstream release (Closes: #325087).
+  * Fix build dependencies (Closes: #346978).
 
  -- Gordon Fraser <gordon@debian.org>  Sun, 15 Jan 2006 14:19:28 +0100
 
 wmmemload (0.1.5-2) unstable; urgency=low
 
   * Revert accidental changes to automake-files that would
-    cause a build-dep on automake (Closes: #218277)
+    cause a build-dep on automake (Closes: #218277).
 
  -- Gordon Fraser <gordon@debian.org>  Sun,  2 Nov 2003 17:32:49 +0100
 
 wmmemload (0.1.5-1) unstable; urgency=low
 
-  * New maintainer (Closes: #216754)
-  * New upstream version
-  * debian/rules: Clean up, improve support for DEB_BUILD_OPTIONS
+  * New maintainer (Closes: #216754).
+  * New upstream release.
+  * debian/rules
+    - Clean up, improve support for DEB_BUILD_OPTIONS.
   * Add menu entry
-  * debian/control: Standards-version to 3.6.1
-  * Update debian/copyright
-  * Update description, include upstream homepage
+  * debian/control
+    - Bump Standards-Version to 3.6.1.
+  * Update debian/copyright.
+  * Update description, include upstream homepage.
   * Use manpage provided by upstream with minor corrections
-    instead of debian/wmmemload.1
+    instead of debian/wmmemload.1.
 
  -- Gordon Fraser <gordon@debian.org>  Mon, 20 Oct 2003 21:45:30 +0200
 
 wmmemload (0.1.4-1) unstable; urgency=low
 
-  * New upstream release
+  * New upstream release.
 
  -- Søren Boll Overgaard <boll@debian.org>  Mon, 24 Jun 2002 23:23:18 +0200
 
 wmmemload (0.1.3-4) unstable; urgency=low
 
-  * Install a bit of upstream documentation
-  * Remove useless calls to dh_*
-  * Clean up man page
+  * Install a bit of upstream documentation.
+  * Remove useless calls to dh_*.
+  * Clean up man page.
 
  -- Søren Boll Overgaard <boll@debian.org>  Sat,  1 Jun 2002 19:00:29 +0200
 
@@ -139,15 +144,15 @@ wmmemload (0.1.3-3) unstable; urgency=low
 
 wmmemload (0.1.3-2) unstable; urgency=low
 
-  * Fix building error on sparc (closes: Bug#144732)
-  * Only support i386 architecture until upstream officially supports others
-  * Make sure the Makefile exists when calling make distclean
+  * Fix building error on sparc (Closes: #144732).
+  * Only support i386 architecture until upstream officially supports others.
+  * Make sure the Makefile exists when calling make distclean.
 
  -- Søren Boll Overgaard <boll@debian.org>  Mon, 29 Apr 2002 10:37:35 +0200
 
 wmmemload (0.1.3-1) unstable; urgency=low
 
-  * Initial Release (closes: Bug#144190)
+  * Initial release (Closes: #144190).
 
  -- Søren Boll Overgaard <boll@debian.org>  Tue, 23 Apr 2002 11:51:32 +0200
 
