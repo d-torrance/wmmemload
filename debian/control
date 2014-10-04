@@ -3,7 +3,7 @@ Section: x11
 Priority: optional
 Maintainer: Doug Torrance <dtorrance@monmouthcollege.edu>
 Build-Depends: debhelper (>=9), dh-autoreconf, libx11-dev, libxext-dev, libxpm-dev, libxt-dev
-Standards-Version: 3.9.2
+Standards-Version: 3.9.6
 Vcs-Browser: http://svn.debian.org/wsvn/collab-maint/deb-maint/wmmemload/
 Vcs-Svn: svn://svn.debian.org/collab-maint/deb-maint/wmmemload/
 
