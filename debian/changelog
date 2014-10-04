@@ -1,4 +1,4 @@
-wmmemload (0.1.6+20141004-1) UNRELEASED; urgency=medium
+wmmemload (0.1.6+20141004-1) unstable; urgency=medium
 
   * New upstream release (git snapshot).
   * New maintainer (Closes: #763099).
@@ -28,7 +28,7 @@ wmmemload (0.1.6+20141004-1) UNRELEASED; urgency=medium
   * debian/watch
     - Update with new download location.
 
- -- Doug Torrance <dtorrance@monmouthcollege.edu>  Sat, 04 Oct 2014 04:28:06 -0500
+ -- Doug Torrance <dtorrance@monmouthcollege.edu>  Sat, 04 Oct 2014 14:42:17 -0500
 
 wmmemload (0.1.6-8) unstable; urgency=low
 
