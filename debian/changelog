@@ -1,3 +1,22 @@
+wmmemload (0.1.6+20141004-1) UNRELEASED; urgency=medium
+
+  * New upstream release (git snapshot).
+  * New maintainer (Closes: #763099)
+  * debian/compat
+    - Bump to 9.
+  * debian/rules
+    - Update to use dh.
+  * debian/source/format
+    - New file; use 3.0 (quilt).
+  * debian/control
+    - Bump versioned dependency on debhelper to >=9
+    - Remove Build-Depends on quilt and autotools-dev
+    - Add Build-Depends on dh-autoreconf.
+    - Bump Standards-Version to 3.9.6.
+    - Update Vcs-*.
+
+ -- Doug Torrance <dtorrance@monmouthcollege.edu>  Sat, 04 Oct 2014 04:28:06 -0500
+
 wmmemload (0.1.6-8) unstable; urgency=low
 
   * Package orphaned.
