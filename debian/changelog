@@ -155,4 +155,3 @@ wmmemload (0.1.3-1) unstable; urgency=low
   * Initial release (Closes: #144190).
 
  -- Søren Boll Overgaard <boll@debian.org>  Tue, 23 Apr 2002 11:51:32 +0200
-
