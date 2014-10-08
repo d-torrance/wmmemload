@@ -14,7 +14,7 @@ wmmemload (0.1.6+20141004-1) unstable; urgency=medium
   * debian/copyright
     - Add header paragraph and some reformatting.
   * debian/dirs
-    - Remove unecessary file.
+    - Remove unnecessary file.
   * debian/patches
     - Remove directory; all patches either unnecessary with dh-autoreconf
       or applied upstream.
