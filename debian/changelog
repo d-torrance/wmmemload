@@ -5,8 +5,18 @@ wmmemload (0.1.7-1) UNRELEASED; urgency=medium
     - Add support for the Hurd and GNU/kFreeBSD (Closes: #764356).
   * debian/control
     - Add libkvm-dev [kfreebsd-any] to Build-Depends.
+  * debian/docs
+    - New file.
+  * debian/lintian-overrides
+    - Add override for setgid-binary in kfreebsd.
+  * debian/patches
+    - (fix-unused-result.patch) Fix compiler warning.
+  * debian/rules
+    - Add --no-symlink option to uscan in get-orig-source target.
+    - Add override_dh_fixperms target for kfreebsd to prevent setgid bit from
+      being stripped.
 
- -- Doug Torrance <dtorrance@monmouthcollege.edu>  Fri, 10 Oct 2014 10:16:13 -0500
+ -- Doug Torrance <dtorrance@monmouthcollege.edu>  Fri, 10 Oct 2014 17:35:52 -0500
 
 wmmemload (0.1.6+20141004-1) unstable; urgency=medium
 
