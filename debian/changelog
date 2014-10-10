@@ -1,3 +1,13 @@
+wmmemload (0.1.7-1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+    - Add support for newer Linux kernels (Closes: #749216).
+    - Add support for the Hurd and GNU/kFreeBSD (Closes: #764356).
+  * debian/control
+    - Add libkvm-dev [kfreebsd-any] to Build-Depends.
+
+ -- Doug Torrance <dtorrance@monmouthcollege.edu>  Fri, 10 Oct 2014 10:16:13 -0500
+
 wmmemload (0.1.6+20141004-1) unstable; urgency=medium
 
   * New upstream release (git snapshot).
