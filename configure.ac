@@ -2,7 +2,7 @@ dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
 
 dnl AC_INIT(src/main.c)
-AC_INIT(wmmemload, 0.1.6, me@markstaggs.net)
+AC_INIT(wmmemload, 0.1.7, wmaker-dev@lists.windowmaker.org)
 AC_CANONICAL_HOST
 AC_CANONICAL_TARGET
 AM_INIT_AUTOMAKE
@@ -97,7 +97,7 @@ linux*)
   ignore_buffers=yes
   ignore_cached=yes
   ;;
-freebsd*)
+*freebsd*)
   OS=freebsd
   ignore_wired=yes
   ignore_cached=yes
@@ -109,6 +109,11 @@ openbsd*)
   ;;
 solaris*)
   OS=solaris
+  ;;
+gnu*)
+  OS=gnu
+  ignore_buffers=yes
+  ignore_cached=yes
   ;;
 *)
   echo ""

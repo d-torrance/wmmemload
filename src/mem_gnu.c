@@ -1,6 +1,7 @@
 /*
- * mem_linux.c - module to get memory/swap usages, for GNU/Linxu
+ * mem_gnu.c - module to get memory/swap usages, for GNU/Hurd
  *
+ * Copyright(C) 2014       Svante Signell <svante.signell@gmail.com>
  * Copyright(C) 2001,2002  Seiichi SATO <ssato@sh.rim.or.jp>
  * Copyright(C) 2001       John McCutchan <ttb@tentacle.dhs.org>
  *
@@ -28,12 +29,6 @@
 #include <sys/utsname.h>
 #include "mem.h"
 
-static enum {
-	BEFORE_2_5_1,
-	BETWEEN_2_5_1_AND_3_14,
-	AFTER_3_14
-} format;
-
 #ifdef DEBUG
 #  define INLINE_STATIC static
 #else
@@ -44,24 +39,12 @@ static enum {
 void mem_init(void)
 {
 	struct utsname un;
-	int version, patchlevel, sublevel;
+	int version, patchlevel;
 
 	/* get kernel version */
 	if (uname(&un) == -1)
 		perror("uname()");
-	sscanf(un.release, "%d.%d.%d", &version, &patchlevel, &sublevel);
-
-	/* new format ? (kernel >= 3.14 or 2.5.1pre?) */
-	/* see linux/fs/proc/proc_misc.c */
-	/* or linux/fs/proc/meminfo.c */
-	if ((version == 3 && patchlevel >= 14) || version > 3)
-		format = AFTER_3_14;
-	else if ((version == 2 && patchlevel >= 5 && sublevel >= 1) ||
-	    (version == 2 && patchlevel >= 6 && sublevel >= 0) ||
-	    version > 2)
-		format = BETWEEN_2_5_1_AND_3_14;
-	else
-		format = BEFORE_2_5_1;
+	sscanf(un.release, "%d.%d", &version, &patchlevel);
 }
 
 
@@ -113,45 +96,15 @@ void mem_getusage(int *per_mem, int *per_swap, const struct mem_options *opts)
 	buffer[len] = '\0';
 	p = buffer;
 
-	switch (format) {
-	case (BEFORE_2_5_1):
-		/* skip 3 lines */
-		for (i = 0; i < 3; i++)
-			p = skip_line(p);
-		p = skip_token(p);
-		/* examine each line of file */
-		mtotal  = strtoul(p, &p, 0); p = skip_multiple_token(p, 2);
-		mfree   = strtoul(p, &p, 0); p = skip_multiple_token(p, 5);
-		mbuffer = strtoul(p, &p, 0); p = skip_multiple_token(p, 2);
-		mcached = strtoul(p, &p, 0); p = skip_multiple_token(p, 2);
-		scached = strtoul(p, &p, 0);
-		break;
-
-	case (BETWEEN_2_5_1_AND_3_14):
-		p = skip_token(p);
-		/* examine each line of file */
-		mtotal  = strtoul(p, &p, 0); p = skip_multiple_token(p, 2);
-		mfree   = strtoul(p, &p, 0); p = skip_multiple_token(p, 2);
-		mbuffer = strtoul(p, &p, 0); p = skip_multiple_token(p, 2);
-		mcached = strtoul(p, &p, 0); p = skip_multiple_token(p, 2);
-		scached = strtoul(p, &p, 0);
-		break;
-
-	case (AFTER_3_14):
-		p = skip_token(p);
-		/* examine each line of file */
-		mtotal  = strtoul(p, &p, 0); p = skip_multiple_token(p, 2);
-		mfree   = strtoul(p, &p, 0);
-		p = skip_multiple_token(p, 5); /* skip MemAvailable line */
-		mbuffer = strtoul(p, &p, 0); p = skip_multiple_token(p, 2);
-		mcached = strtoul(p, &p, 0); p = skip_multiple_token(p, 2);
-		scached = strtoul(p, &p, 0);
-		break;
-	}
-
+	p = skip_token(p);
+	/* examine each line of file */
+	mtotal  = strtoul(p, &p, 0); p = skip_multiple_token(p, 2);
+	mfree   = strtoul(p, &p, 0); p = skip_multiple_token(p, 2);
+	mbuffer = strtoul(p, &p, 0); p = skip_multiple_token(p, 2);
+	mcached = strtoul(p, &p, 0); p = skip_multiple_token(p, 2);
+	scached = strtoul(p, &p, 0);
 
 	/* skip N lines and examine info about swap */
-	/* kernel-2.4.2:N=8  2.4.16:N=7  */
 	while (isprint(p[0])) {
 		p = skip_line(p);
 		if (strncmp(p, "SwapTotal", 9) == 0)
