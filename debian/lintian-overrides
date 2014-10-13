@@ -1,2 +1,0 @@
-# This file must be setgid in order to read /dev/mem.
-wmmemload [kfreebsd-any] binary: setgid-binary usr/bin/wmmemload 2755 root/kmem
