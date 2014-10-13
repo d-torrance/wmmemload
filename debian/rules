@@ -1,14 +1,7 @@
 #!/usr/bin/make -f
 
-DEB_HOST_ARCH_OS ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_OS)
-
 %:
 	dh  $@ --with autoreconf
-
-ifeq ($(DEB_HOST_ARCH_OS),kfreebsd)
-override_dh_fixperms:
-	dh_fixperms -Xusr/bin/wmmemload
-endif
 
 get-orig-source:
 	uscan --verbose --force-download --no-symlink
