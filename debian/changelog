@@ -2,7 +2,7 @@ wmmemload (0.1.7-1) unstable; urgency=medium
 
   * New upstream release.
     - Add support for newer Linux kernels (Closes: #749216).
-    - Add support for the Hurd and GNU/kFreeBSD (Closes: #764356, #765295).
+    - Add support for the Hurd and GNU/kFreeBSD (Closes: #764356).
   * debian/docs
     - New file.
   * debian/patches
@@ -11,7 +11,7 @@ wmmemload (0.1.7-1) unstable; urgency=medium
   * debian/rules
     - Add --no-symlink option to uscan in get-orig-source target.
 
- -- Doug Torrance <dtorrance@monmouthcollege.edu>  Mon, 13 Oct 2014 17:54:12 -0500
+ -- Doug Torrance <dtorrance@monmouthcollege.edu>  Mon, 13 Oct 2014 14:49:11 -0500
 
 wmmemload (0.1.6+20141004-1) unstable; urgency=medium
 
