@@ -3,7 +3,7 @@ Description: Use sysctl for swap usage information in GNU/kFreeBSD.
  GNU/kFreeBSD.  This removes the need for a Build-Depends on libkvm-dev and
  having a setgid binary.
 Author: Doug Torrance <dtorrance@monmouthcollege.edu>
-Last-Update: 2014-10-13
+Last-Update: 2014-10-14
 
 --- a/src/mem_freebsd.c
 +++ b/src/mem_freebsd.c
@@ -85,3 +85,14 @@ Last-Update: 2014-10-13
  		}
  
  		swap_firsttime = 0;
+--- a/configure.ac
++++ b/configure.ac
+@@ -101,8 +101,6 @@
+   OS=freebsd
+   ignore_wired=yes
+   ignore_cached=yes
+-  LIBS="$LIBS -lkvm"
+-  SETGID_FLAGS="-g kmem -m 2755 -o root"
+   ;;
+ openbsd*)
+   OS=openbsd
