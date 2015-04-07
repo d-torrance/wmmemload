@@ -1,3 +1,14 @@
+wmmemload (0.1.8-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/patches
+    - Remove directory; patch added upstream.
+  * debian/rules
+    - Split options to rename in get-orig-source target; needed for some
+      versions of rename.
+
+ -- Doug Torrance <dtorrance@monmouthcollege.edu>  Tue, 07 Apr 2015 08:27:16 -0500
+
 wmmemload (0.1.7-2) unstable; urgency=medium
 
   * debian/patches
