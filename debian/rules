@@ -6,6 +6,6 @@
 get-orig-source:
 	uscan --verbose --force-download --no-symlink
 	@if test -e ../wmmemload-*.download ; then \
-		rename -fv "s/wmmemload-(.+)\.download/wmmemload_\1\.orig\.tar\.gz/" \
+		rename -f -v "s/wmmemload-(.+)\.download/wmmemload_\1\.orig\.tar\.gz/" \
 			../wmmemload-*.download; \
 	fi
